@@ -7,8 +7,7 @@ class Post < ApplicationRecord
 
   private
     def update_title
-      self.title = "title #{id}"
-      save
+      update(title: "title #{id}")
     end
 
     def set_shared_url
